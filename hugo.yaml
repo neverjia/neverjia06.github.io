@@ -86,7 +86,6 @@ params:
   TocOpen: true
   extendCodeBackground: false
   socialIcons:
-  ---
     - name: github
       url: "https://github.com/neverjia"
     - name: twitter
@@ -95,7 +94,6 @@ params:
       url: "mailto:jiami1038@gmail.com"
     - name: RSS
       url: "index.xml"
----
   assets:
     favicon: "img/favicon.png"
     favicon16x16: "img/favicon.png"
