@@ -30,7 +30,7 @@ menu:
       weight: 20
     - identifier: post
       name: Post
-      url: /post/
+      url: /posts/
       weight: 2
     - identifier: search
       name: Search
