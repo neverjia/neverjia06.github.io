@@ -1,0 +1,5 @@
+baseURL = ''
+languageCode = 'en-us'
+title = '我的博客'
+theme = 'hugo-PaperMod-master'
+
