@@ -1,5 +1,5 @@
-+++
-title: About
-slug: about
-hidemeta: true
-+++
+---
+title: Search
+slug: search
+layout: search
+---

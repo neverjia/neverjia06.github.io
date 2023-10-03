@@ -1,5 +1,5 @@
-+++
-title: About
+---
+title: about
 slug: about
-hidemeta: true
-+++
+layout: about
+---
