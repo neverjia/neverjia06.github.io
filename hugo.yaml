@@ -1,6 +1,6 @@
 baseURL: https://neverjia.github.io/
 languageCode: zh-cn
-title: neverjia's Blog
+title: MiJia's Blog
 label: 
   text: ""
   icon: "https://github.com/neverjia.png"
@@ -57,7 +57,7 @@ params:
     appendFilePath: true
   profileMode:
     enabled: true
-    title: blog
+    title: Be willing to share
     #subtitle: Devops/Cloudnative/Observability/Elasticstack
     imageUrl: https://github.com/neverjia.png
     imageTitle: 
@@ -67,10 +67,10 @@ params:
 #      - name: Start
 #        url: post
   env: production
-  description: "neverjia's Blog"
+  description: "MiJia's Blog"
   defaultTheme: auto
   disableThemeToggle: false
-  DateFormat: "2006-01-02"
+  DateFormat: "2023-10-02"
   ShowShareButtons: false
   disableSpecialistPost: false
   displayFullLangName: true
@@ -88,12 +88,18 @@ params:
   socialIcons:
     - name: github
       url: "https://github.com/neverjia"
-    - name: twitter
-      url: "https://twitter.com/neverjia"
+#    - name: twitter
+#      url: "https://twitter.com/neverjia"
+    - name: weibo
+      url: "https://m.weibo.cn"
     - name: email
       url: "mailto:jiami1038@gmail.com"
     - name: RSS
       url: "index.xml"
+    - name: steam
+      url: "https://store.steampowered.com/"
+    - name: website
+      url: "http://110.40.134.228/"
   assets:
     favicon: "img/favicon.png"
     favicon16x16: "img/favicon.png"

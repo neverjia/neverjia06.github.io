@@ -3,7 +3,7 @@ title = '配置虚拟机'
 date = 2023-10-02T21:15:18+08:00
 draft = false
 +++
-## ntp的操作
+ntp的操作
 
  ip a
  vi /etc/ssh/sshd_config 
@@ -35,11 +35,9 @@ draft = false
    umount  /mnt
    mount  /dev/sr0 dvd
 
-![image-20220908195854239](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908195854239.png)
 
 
-
-#### 配置开机自动挂载
+配置开机自动挂载
 
 **vi   /etc/fstab**
 
@@ -47,7 +45,7 @@ draft = false
 
 检查配置是否准确：  mount  -a   或者  df  -h 
 
-#### 关闭防火墙
+关闭防火墙
 
 systemctl stop firewalld NetworkManager
 systemctl disable firewalld NetworkManager
@@ -58,13 +56,13 @@ setenforce 0
 vi /etc/selinux/config
 enforcing  改成  disabled
 
-## controller的操作
+controller的操作
 
 cd  /etc/yum.repos.d
 
 vi  dvd.repo
 
-![image-20220908201103956](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908201103956.png)
+
 
 yum  clean all
 
@@ -72,19 +70,15 @@ yum repolist
 
 
 
-## 2.3.2配置OpenStack YUM源
+配置OpenStack YUM源
 
-## 在ntp操作
+在ntp操作
 
 mkdir   /soft
 
 ①上传07-RHEL7OSP-6.0-2015-02-23.2-x86_64到这个目录 /soft
 
-![image-20220908202117424](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908202117424.png)
-
 ②或者也可以在装ntp系统的时候添加一个CD/DVD
-
-
 
 再挂载
 
@@ -98,13 +92,9 @@ mkdir  openstack
 
 mount  /soft/07-RHEL7OSP-6.0-2015-02-23.2-x86_64.iso   openstack
 
-![image-20220908202914812](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908202914812.png)
 
 
-
-
-
-## 挂载openstack yum 源
+挂载openstack yum 源
 
 vi   /etc/fstab
 
@@ -115,7 +105,7 @@ vi   /etc/fstab
 
 
 
-## controller的继续操作
+controller的继续操作
 
  yum -y install vim  net-tools
 
@@ -168,8 +158,6 @@ baseurl=http://192.168.2.111/openstack/RHEL-7-RHSCL-1.2
 enabled=1
 gpgcheck=0
 
-![image-20220908205031542](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908205031542.png)
-
 
 
 
@@ -178,9 +166,7 @@ gpgcheck=0
 
 在controller节点进行远程访问
 
-<img src="C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908205341418.png" alt="image-20220908205341418" style="zoom:50%;" />
 
-![image-20220908205405101](C:\Users\never\AppData\Roaming\Typora\typora-user-images\image-20220908205405101.png)
 
 ### 把这个controller节点的dvd.repo文件发送到其他节点
 

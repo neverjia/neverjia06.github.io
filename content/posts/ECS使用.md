@@ -1,79 +1,45 @@
-+++
-title = '云服务器操作手册'
-date = 2023-10-02T21:15:18+08:00
-draft = false
-+++
-# 一、购买CentOS7.6操作系统，登录
+---
+title: "云主机使用"
+slug: "Title_of_the_post"
+date: 2023-10-08T09:17:06+08:00
+tags: []
+---
+一、购买CentOS7.6操作系统，登录
 
-![](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928120406785.png)
+二、开放安全组2222，修改端口2222在虚拟机里面配置
 
-
-
-## 二、开放安全组2222，修改端口2222在虚拟机里面配置
-
-
-
+```
 vi  ssd_config
-
 cat   ssd_config   |  grep   port
-
 #vi  /etc/ssh/sshd_config
-
 #service  sshd   restart 
-
-![image-20220928154759087](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928154759087.png)
-
+```
 
 
-# 三、 为该云主机添加一块10G的硬盘，名为disk-姓名全拼，将其挂载到云主机的/mnt目录下，并将etc目录下以.conf结尾的文件拷贝到该目录下，为该磁盘创建一个名为disk-snap的快照，创建快照成功后，将/mnt目录下的内容删除，然后使用快照还原云硬盘的存储数据
 
-
+三、 为该云主机添加一块10G的硬盘，名为disk-姓名全拼，将其挂载到云主机的/mnt目录下，并将etc目录下以.conf结尾的文件拷贝到该目录下，为该磁盘创建一个名为disk-snap的快照，创建快照成功后，将/mnt目录下的内容删除，然后使用快照还原云硬盘的存储数据
 
 挂载到/mnt
 
 挂载-》分区-》格式化-》挂载-》卸载-》
 
-## ①分区，挂载
+①分区，挂载
 
-![image-20220928182007312](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182007312.png)
+②格式化，挂载到/mnt目录下
 
+③复制/etc/.conf下的文件到/mnt/目录下
 
+④拍快照
 
-## ②格式化，挂载到/mnt目录下
+⑤然后删除/mnt/下面的数据
 
-![image-20220928181913447](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928181913447.png)
+⑥卸载云磁盘
 
+⑦回滚数据
 
+⑧再将磁盘挂载
 
-## ③复制/etc/.conf下的文件到/mnt/目录下
-
-![image-20220928182225085](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182225085.png)
-
-
-
-## ④拍快照
-
-![image-20220928182506015](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182506015.png)
-
-## ⑤然后删除/mnt/下面的数据，
-
-![image-20220928182545720](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182545720.png)
-
-## ⑥卸载云磁盘
-
-![image-20220928182659661](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182659661.png)
-
-## ⑦回滚数据
-
-![image-20220928182927985](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928182927985.png)
-
-
-
-## ⑧再将磁盘挂载
-
-![image-20220928183051197](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928183051197.png)
-
-## ⑨在命令行操作
+⑨在命令行操作
 
 ```
 #回滚数据以后，发现多了一个磁盘/dev/vdc1
@@ -128,31 +94,9 @@ ld.so.conf   rsyslog.conf
 
 
 
-
-
-
-
-
-
 四、将云服务器的规格变更为2H2G后将系统重装为windows，Server2019；在磁盘管理中找到数据盘，并且将该盘格式化为ntfs
 
-![image-20220928184738448](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928184738448.png)
-
-变更操作系统完成
-
-![image-20220928185516950](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928185516950.png)
-
-
-
-登录到Windows
-
-找到磁盘管理-》格式化为ntfs类型
-
-![image-20220928191011421](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928191011421.png)
-
-
-
-![image-20220928191045516](C:/Users/never/AppData/Roaming/Typora/typora-user-images/image-20220928191045516.png)
+变更操作系统完成-》登录到Windows-》找到磁盘管理-》格式化为ntfs类型
 
 五、 重置云服务器的系统密码为WuRuan12#$
 
