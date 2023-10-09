@@ -1,10 +1,15 @@
-
+<!-- 
 ---
 title: "搭建OpenStack"
 slug: "Title_of_the_post"
 date: 2023-10-08T09:17:06+08:00
 tags: []
----
+--- -->
++++
+title = '搭建OpenStack'
+date = 2023-10-03T21:15:18+08:00
+draft = false
++++
 # 环境搭建（在线源安装）
 
 Openstack环境搭建有很多种方法：

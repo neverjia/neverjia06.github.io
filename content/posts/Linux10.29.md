@@ -2,8 +2,8 @@
 title = '学习Linux'
 date = 2023-10-03T21:15:18+08:00
 draft = false
-
 +++
+
 学习Linux整体
 
 1.建立整体的一个框架
