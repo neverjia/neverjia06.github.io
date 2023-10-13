@@ -7,7 +7,7 @@ tags: []
 一、购买CentOS7.6操作系统，登录
 
 二、开放安全组2222，修改端口2222在虚拟机里面配置
-
+ 
 ```
 vi  ssd_config
 cat   ssd_config   |  grep   port
